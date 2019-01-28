@@ -103,7 +103,7 @@ This actually creates 3 test results as you can see in the output window:
 
 ![]({{site.baseurl}}/img/unit-test-data/dotnettest1.png)
 
-We'll now need to do the same thing for the API routs. Why in a separate method? Because the first integration test also checks the content type which is the type of a HTML document. The content type of the API results is `application/json`:
+We'll now need to do the same thing for the API routes. Why in a separate method? Because the first integration test also checks the content type which is the type of a HTML document. The content type of the API results is `application/json`:
 
 ~~~ csharp
 [Theory]
@@ -254,7 +254,7 @@ At the end we should run all the tests of the solution at once to be sure not to
 
 ## Conclusion
 
-I wrote that integration test will cost a lot more effort than unit test. This isn't completely true since we are able to use the `WebApplicationFactory`. In many other cases it will be a little more expensive, depending how you want to test and how many dependencies you have.. You need to figure out how you want to isolate a integration test. More isolation sometimes means more effort, less isolation means more dependencies that may break your test.
+I wrote that integration test will cost a lot more effort than unit test. This isn't completely true since we are able to use the `WebApplicationFactory`. In many other cases it will be a little more expensive, depending how you want to test and how many dependencies you have. You need to figure out how you want to isolate a integration test. More isolation sometimes means more effort, less isolation means more dependencies that may break your test.
 
 Anyway. Writing integration tests in my point of view is more important than writing unit tests, because it tests that the parts of the application are working together. And it is not that hard and doesn't cost that much. 
 
